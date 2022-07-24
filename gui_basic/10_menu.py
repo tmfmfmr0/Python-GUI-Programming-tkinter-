@@ -2,15 +2,14 @@ from tkinter import *
 
 root = Tk()
 root.title("Nado GUI")
-root.geometry("640x480") # 가로 * 세로
-
-def create_new_file():
-    print("새 파일을 만듭니다.")
+root.geometry("640x480")
 
 menu = Menu(root)
 
 # File 메뉴
 menu_file = Menu(menu, tearoff=0)
+def create_new_file():
+    print("새 파일을 만듭니다.")
 menu_file.add_command(label="New File", command=create_new_file)
 menu_file.add_command(label="New Window")
 menu_file.add_separator()
@@ -37,4 +36,5 @@ menu_view.add_checkbutton(label="Show Minimap")
 menu.add_cascade(label="View", menu=menu_view)
 
 root.config(menu=menu)
+
 root.mainloop()

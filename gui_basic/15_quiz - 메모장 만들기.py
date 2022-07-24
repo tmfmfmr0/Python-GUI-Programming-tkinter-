@@ -3,20 +3,20 @@ from tkinter import *
 
 root = Tk()
 root.title("제목 없음 - Windows 메모장")
-root.geometry("640x480") # 가로 * 세로
+root.geometry("640x480")
 
 # 열기, 저장 파일 이름
 filename = "mynote.txt"
 
 def open_file():
-    if os.path.isfile(filename): # 파일 있으면 True, 없으면 False
+    if os.path.isfile(filename):    # 파일 있으면 True, 없으면 False
         with open(filename, "r", encoding="utf8") as file:
-            txt.delete("1.0", END) # 텍스트 위젯 본문 삭제
-            txt.insert(END, file.read()) # 파일 내용을 본문에 입력
+            txt.delete("1.0", END)    # 텍스트 위젯 본문 삭제
+            txt.insert(END, file.read())    # 파일 내용을 본문에 입력
 
 def save_file():
     with open(filename, "w", encoding="utf8") as file:
-        file.write(txt.get("1.0", END)) # 모든 내용을 가져와서 저장
+        file.write(txt.get("1.0", END))    # 모든 내용을 가져와서 저장
 
 menu = Menu(root)
 

@@ -23,11 +23,7 @@ btn5.pack()
 
 # 이미지 버튼
 photo = PhotoImage(file="gui_basic/img.png")    # 이미지 불러와서 객체로 저장
-btn6 = Button(root, image=photo)    
-btn6.pack()
-
-# 이미지 버튼
-btn6 = Button(root, image=photo, text="버튼6")    
+btn6 = Button(root, image=photo)    # 이미지랑 텍스트 동시에는 안됨
 btn6.pack()
 
 # 버튼 동작 함수
